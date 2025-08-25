@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phân Tích Tương Tác Chi Tiết: Dự Án La Tiên Villa Nha Trang - Vũ Trọng Khải - 093 8811 050</title>
+    <title>Bảng Điều Khiển Phân Tích Tương Tác: Dự Án La Tiên Villa - Vũ Trọng Khải - 093 8811 050</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Chosen Palette: Warm Neutrals with Subtle Gold Accent -->
-    <!-- Application Structure Plan: This is an enhanced version. The structure maintains the top-down flow from overview to specifics but injects more detail at each level. A new "Product Details" section is added after the initial overview to ground the user in the tangible aspects of the villa before diving into financial analysis. The analysis section is deepened with more granular financial models and rental program details. The legal section is fortified with a table of official documents. This iterative enhancement adds layers of detail, allowing a user to go from a general understanding to a deep-dive thẩm định (due diligence) within the same single-page flow. -->
+    <!-- Application Structure Plan: The application is structured as a top-down investment dashboard, guiding the user from high-level value propositions to granular analysis. It starts with the core investment thesis (Location, Ecosystem, Brand), then delves into product specifics and an interactive amenity explorer. The core of the app is the 'Interactive Investment Analysis' section, featuring a competitive chart and a detailed payment scenario simulator. It concludes with transparent partner and legal information. This thematic flow is more intuitive for an investor than a linear report, allowing them to grasp key selling points first before drilling down into financial and legal due diligence. -->
     <!-- Visualization & Content Choices: 
-    1. Product Design (Goal: Inform/Detail): A new card-based grid explains key design philosophies ("ngôi nhà biết thở", giật cấp) and handover standards (Minotti furniture). This breaks down complex product info into visually appealing, digestible points. Method: HTML/Tailwind.
-    2. Amenity Explorer (Goal: Explore/Organize): An interactive, filterable grid for the 99+ amenities. This makes an abstract number tangible and explorable, categorized for clarity (Culture, Entertainment, Wellness). Method: Vanilla JS for filtering.
-    3. Enhanced Investment Scenarios (Goal: Simulate/Analyze): The scenario simulator now outputs a detailed table showing capital, cash flow, and debt service. This moves from a qualitative pro/con list to a more quantitative analysis. Method: JS updates a detailed HTML table.
-    4. Rental Programs (Goal: Compare/Inform): A new toggle component clearly explains the two different leaseback options. This directly addresses a key investor question. Method: Vanilla JS for toggling content.
-    5. Legal Document Table (Goal: Build Trust/Verify): A simple HTML table lists key legal documents (permits, approvals) with their official numbers and dates. This adds a layer of factual transparency and credibility. Method: HTML/Tailwind.
+    1. Competitive Analysis (Goal: Compare): A Chart.js bar chart visually compares La Tiên's price against competitors, which is more immediate than a text table. Interaction: Tooltips on hover provide specific USPs. Library: Chart.js.
+    2. Payment Scenarios (Goal: Simulate/Analyze): An interactive component with buttons allows users to select different financial plans (Loan, 18-month, 30-month, Early). This transforms complex payment schedules into a dynamic tool, showing a detailed breakdown for each choice. Method: Vanilla JS updates a detailed HTML table.
+    3. SWOT Analysis (Goal: Inform/Organize): A tab-like interface built with HTML/JS presents Strengths, Weaknesses, Opportunities, and Threats, organizing complex information into digestible chunks. Method: Vanilla JS for toggling visibility.
+    4. Amenity Explorer (Goal: Explore): A filterable grid for the 99+ amenities makes an abstract number tangible and allows users to explore based on interest (e.g., Culture, Entertainment). Method: Vanilla JS for filtering and rendering.
+    5. Legal Documents (Goal: Build Trust): A clean, static HTML table lists key legal documents, providing factual transparency. Method: HTML/Tailwind.
     -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
@@ -114,10 +114,9 @@
                 <a href="#overview" class="nav-link">Tổng Quan</a>
                 <a href="#product-details" class="nav-link">Sản Phẩm</a>
                 <a href="#analysis" class="nav-link">Phân Tích Đầu Tư</a>
-                <a href="#partners" class="nav-link">Đối Tác</a>
-                <a href="#risks" class="nav-link">Rủi Ro & Pháp Lý</a>
+                <a href="#partners" class="nav-link">Đối Tác & Pháp Lý</a>
             </div>
-            <a href="#conclusion" class="hidden md:inline-block btn-primary px-6 py-2 rounded-full font-semibold">Bắt đầu thẩm định</a>
+            <a href="#conclusion" class="hidden md:inline-block btn-primary px-6 py-2 rounded-full font-semibold">Checklist Thẩm Định</a>
         </nav>
     </header>
 
@@ -126,12 +125,12 @@
              <div class="absolute inset-0 bg-gradient-to-b from-white to-[#fdfcfb] z-0"></div>
             <div class="container mx-auto px-6 relative z-10">
                 <h1 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-4">
-                    Phân Tích Chuyên Sâu: <span class="text-[#a77b50]">La Tiên Villa</span>
+                    Bảng Điều Khiển Đầu Tư: <span class="text-[#a77b50]">La Tiên Villa</span>
                 </h1>
                 <p class="text-lg md:text-xl max-w-3xl mx-auto text-gray-600 mb-8">
-                    Một công cụ tương tác giúp nhà đầu tư thẩm định toàn diện dự án, từ vị thế chiến lược, tiềm năng tài chính đến các yếu tố rủi ro.
+                    Một công cụ tương tác giúp thẩm định toàn diện dự án, từ luận điểm cốt lõi, phân tích tài chính đến các yếu tố pháp lý quan trọng.
                 </p>
-                <a href="#overview" class="btn-primary px-8 py-3 rounded-full font-bold text-lg">Khám Phá Luận Điểm Đầu Tư</a>
+                <a href="#overview" class="btn-primary px-8 py-3 rounded-full font-bold text-lg">Bắt Đầu Phân Tích</a>
             </div>
         </section>
 
@@ -140,25 +139,25 @@
                 <div class="text-center max-w-3xl mx-auto mb-12">
                      <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Luận Điểm Đầu Tư Cốt Lõi</h2>
                     <p class="text-gray-600">
-                        Giá trị của La Tiên Villa không nằm ở một yếu tố đơn lẻ, mà là sự cộng hưởng của một "tam giác vàng" chiến lược. Mỗi đỉnh của tam giác này là một lợi thế cạnh tranh bền vững, tạo nên một "con hào kinh tế" vững chắc cho dự án.
+                        Giá trị của La Tiên Villa được xây dựng trên nền tảng "tam giác vàng" chiến lược. Mỗi đỉnh của tam giác là một lợi thế cạnh tranh bền vững, được củng cố bởi tiến độ xây dựng hiện hữu và các chính sách đột phá, tạo nên một "con hào kinh tế" vững chắc cho dự án.
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="card p-8 rounded-xl text-center">
                         <div class="text-4xl mb-4">📍</div>
-                        <h3 class="text-xl font-bold mb-2">Vị Thế "Tọa Độ Vàng"</h3>
-                        <p class="text-gray-600">Tọa lạc tại Bãi Tiên, mặt tiền đường Phạm Văn Đồng, quỹ đất ven biển nội đô cuối cùng của Nha Trang. Vừa đủ riêng tư để nghỉ dưỡng, vừa đủ gần để kết nối trung tâm. Địa thế "tựa sơn, hướng hải" độc tôn.</p>
+                        <h3 class="text-xl font-bold mb-2">Vị Thế Hiện Hữu</h3>
+                        <p class="text-gray-600">Tọa lạc tại Bãi Tiên, quỹ đất ven biển nội đô cuối cùng, nay đã hoàn thiện hạ tầng và có nhà mẫu thực tế. Giá trị không còn là tiềm năng mà đã hiện hữu, "mắt thấy tay chạm".</p>
                     </div>
                     <div class="card p-8 rounded-xl text-center">
                         <div class="text-4xl mb-4">🏙️</div>
                         <h3 class="text-xl font-bold mb-2">Hệ Sinh Thái "All-in-One"</h3>
-                        <p class="text-gray-600">Thừa hưởng trọn vẹn hơn 99 tiện ích của đại đô thị Libera Nha Trang: Nhà hát Đó, công viên san hô, bến du thuyền, phố đi bộ... tạo thành một điểm đến tự thân, đảm bảo tỷ lệ lấp đầy.</p>
+                        <p class="text-gray-600">Thừa hưởng trọn vẹn hơn 99 tiện ích của đại đô thị Libera Nha Trang: Nhà hát Đó, công viên san hô, bến du thuyền... tạo thành một điểm đến tự thân, đảm bảo tỷ lệ lấp đầy.</p>
                     </div>
                     <div class="card p-8 rounded-xl text-center">
                         <div class="text-4xl mb-4">🤝</div>
                         <h3 class="text-xl font-bold mb-2">Bảo Chứng Thương Hiệu Kép</h3>
-                        <p class="text-gray-600">Sự kết hợp giữa KDI Holdings, đơn vị đồng phát triển Masterise Homes (BĐS hàng hiệu) và đơn vị vận hành The Ascott Limited (Somerset) tạo nên một bảo chứng vững chắc về chất lượng và đẳng cấp quốc tế.</p>
+                        <p class="text-gray-600">Sự kết hợp giữa KDI Holdings, đơn vị đồng phát triển Masterise Homes (BĐS hàng hiệu) và đơn vị vận hành The Ascott Limited tạo nên một bảo chứng vững chắc về chất lượng và đẳng cấp quốc tế.</p>
                     </div>
                 </div>
             </div>
@@ -175,17 +174,17 @@
                 <div class="bg-[#fdfcfb] p-8 rounded-2xl border border-[#f0e9e1] mb-12">
                     <h3 class="text-2xl font-bold text-center mb-8">Kiến Trúc & Tiêu Chuẩn Bàn Giao</h3>
                     <div class="grid md:grid-cols-3 gap-8">
-                        <div class="text-center">
+                        <div class="text-center p-4">
                             <h4 class="font-bold text-lg mb-2">Thiết Kế Giật Cấp</h4>
                             <p class="text-sm text-gray-600">Lấy cảm hứng từ ruộng bậc thang, kiến trúc giật cấp đảm bảo hầu hết các căn biệt thự đều có tầm nhìn panorama hướng biển không bị che chắn – một yếu tố xa xỉ quyết định giá trị.</p>
                         </div>
-                        <div class="text-center">
-                            <h4 class="font-bold text-lg mb-2">"Ngôi Nhà Biết Thở"</h4>
-                            <p class="text-sm text-gray-600">Triết lý thiết kế từ Masterise Homes, tối ưu hóa không gian mở, thông gió và ánh sáng tự nhiên, tạo nên một không gian nghỉ dưỡng hài hòa và tiết kiệm năng lượng.</p>
+                        <div class="text-center p-4">
+                            <h4 class="font-bold text-lg mb-2">Bàn Giao Linh Hoạt</h4>
+                            <p class="text-sm text-gray-600">Cung cấp 2 lựa chọn: **Full nội thất** (chuẩn 5 sao) sẵn sàng khai thác, hoặc **bàn giao thô** (chiết khấu ~1.6 tỷ) cho chủ nhân tự do sáng tạo không gian sống.</p>
                         </div>
-                        <div class="text-center">
-                            <h4 class="font-bold text-lg mb-2">Bàn Giao Full Nội Thất</h4>
-                            <p class="text-sm text-gray-600">Bàn giao "chìa khóa trao tay" với nội thất cao cấp chuẩn 5 sao (tham khảo thương hiệu Minotti - Ý), sẵn sàng để ở hoặc khai thác cho thuê ngay lập tức.</p>
+                        <div class="text-center p-4">
+                            <h4 class="font-bold text-lg mb-2">Sở Hữu Đến 2071</h4>
+                            <p class="text-sm text-gray-600">Pháp lý rõ ràng với hình thức Đất TMDV có thời hạn sử dụng đến **năm 2071**, cung cấp một khung thời gian khai thác dài hạn và an toàn cho nhà đầu tư.</p>
                         </div>
                     </div>
                 </div>
@@ -209,7 +208,7 @@
                 <div class="text-center max-w-3xl mx-auto mb-12">
                      <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Phân Tích Đầu Tư Tương Tác</h2>
                     <p class="text-gray-600">
-                        Phần này cung cấp các công cụ để bạn trực tiếp so sánh, phân tích và mô phỏng các kịch bản đầu tư. Hãy tương tác với các biểu đồ và lựa chọn để hiểu sâu hơn về vị thế cạnh tranh và tiềm năng tài chính của dự án.
+                        Sử dụng các công cụ dưới đây để so sánh, mô phỏng và phân tích các kịch bản đầu tư. Tương tác với các lựa chọn để hiểu sâu hơn về vị thế cạnh tranh và tiềm năng tài chính của dự án theo chính sách mới nhất.
                     </p>
                 </div>
 
@@ -222,39 +221,27 @@
                 </div>
                 
                 <div class="bg-white p-8 rounded-2xl border border-[#f0e9e1] mb-12">
-                    <h3 class="text-2xl font-bold mb-6 text-center">Mô Phỏng Kịch Bản Đầu Tư</h3>
-                    <p class="text-center text-gray-500 mb-6">Chọn một phương án để xem phân tích dòng tiền giả định chi tiết cho một căn biệt thự 15 tỷ.</p>
-                    <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-2 mb-6">
-                        <button class="scenario-btn btn-secondary px-4 py-2 rounded-full font-semibold active" data-scenario="vay">Vay 70% (HTLS 36 tháng)</button>
-                        <button class="scenario-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-scenario="tien-do">Thanh toán theo tiến độ</button>
-                        <button class="scenario-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-scenario="som">Thanh toán sớm 95%</button>
+                    <h3 class="text-2xl font-bold mb-6 text-center">Mô Phỏng Kịch Bản Thanh Toán</h3>
+                    <p class="text-center text-gray-500 mb-6">Chọn một phương án để xem phân tích dòng tiền chi tiết theo chính sách bán hàng mới nhất.</p>
+                    <div class="flex flex-wrap justify-center gap-2 mb-6">
+                        <button class="scenario-btn btn-secondary px-4 py-2 rounded-full font-semibold active" data-scenario="vay-uu-dai">Vay 70% (Ưu đãi 100 KH)</button>
+                        <button class="scenario-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-scenario="tien-do-18">Tiến độ 18 tháng (CK 5%)</button>
+                        <button class="scenario-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-scenario="tien-do-30">Tiến độ giãn 30 tháng</button>
+                        <button class="scenario-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-scenario="som">Thanh toán sớm (CK 15%)</button>
                     </div>
                     <div id="scenario-details" class="fade-in overflow-x-auto">
                     </div>
                 </div>
 
-                <div class="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
-                    <div class="bg-white p-8 rounded-2xl border border-[#f0e9e1]">
-                        <h3 class="text-2xl font-bold mb-6 text-center">Phân Tích SWOT</h3>
-                        <div class="flex justify-center flex-wrap gap-2 mb-6">
-                            <button class="swot-btn btn-secondary px-4 py-2 rounded-full font-semibold active" data-target="strengths">Điểm Mạnh (S)</button>
-                            <button class="swot-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-target="weaknesses">Điểm Yếu (W)</button>
-                            <button class="swot-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-target="opportunities">Cơ Hội (O)</button>
-                            <button class="swot-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-target="threats">Thách Thức (T)</button>
-                        </div>
-                        <div id="swot-content" class="fade-in min-h-[250px]">
-                        </div>
+                <div class="bg-white p-8 rounded-2xl border border-[#f0e9e1]">
+                    <h3 class="text-2xl font-bold mb-6 text-center">Phân Tích SWOT</h3>
+                    <div class="flex justify-center flex-wrap gap-2 mb-6">
+                        <button class="swot-btn btn-secondary px-4 py-2 rounded-full font-semibold active" data-target="strengths">Điểm Mạnh (S)</button>
+                        <button class="swot-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-target="weaknesses">Điểm Yếu (W)</button>
+                        <button class="swot-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-target="opportunities">Cơ Hội (O)</button>
+                        <button class="swot-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-target="threats">Thách Thức (T)</button>
                     </div>
-
-                    <div class="bg-white p-8 rounded-2xl border border-[#f0e9e1]">
-                        <h3 class="text-2xl font-bold mb-6 text-center">Chương Trình Cam Kết Cho Thuê</h3>
-                        <p class="text-center text-gray-500 mb-6">Chọn loại hình biệt thự để xem chính sách hợp tác khai thác.</p>
-                        <div class="flex justify-center space-x-2 mb-6">
-                            <button class="rental-btn btn-secondary px-4 py-2 rounded-full font-semibold active" data-target="single">Biệt Thự Đơn Lập</button>
-                            <button class="rental-btn btn-secondary px-4 py-2 rounded-full font-semibold" data-target="semi">Biệt Thự Song Lập</button>
-                        </div>
-                        <div id="rental-details" class="fade-in min-h-[250px]">
-                        </div>
+                    <div id="swot-content" class="fade-in min-h-[250px]">
                     </div>
                 </div>
             </div>
@@ -263,94 +250,63 @@
         <section id="partners" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Hệ Sinh Thái Đối Tác "All-Stars"</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Đối Tác & Khung Pháp Lý</h2>
                     <p class="text-gray-600">
-                        Dự án quy tụ những tên tuổi hàng đầu thế giới trong từng lĩnh vực, từ thiết kế, xây dựng đến vận hành, tạo thành một mạng lưới bảo chứng chất lượng toàn diện.
+                        Sự thành công của một dự án lớn được bảo chứng bởi hệ sinh thái đối tác uy tín và một nền tảng pháp lý minh bạch, vững chắc.
                     </p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-12">
                     <div class="card p-6 rounded-xl">
                         <h4 class="font-bold text-lg">Masterise Homes</h4>
                         <p class="text-sm text-[#a77b50] font-semibold">Đồng phát triển</p>
-                        <p class="text-xs text-gray-500 mt-2">Tiên phong BĐS hàng hiệu, định hình đẳng cấp sản phẩm.</p>
                     </div>
                     <div class="card p-6 rounded-xl">
                         <h4 class="font-bold text-lg">The Ascott Limited</h4>
                         <p class="text-sm text-[#a77b50] font-semibold">Vận hành (Somerset)</p>
-                        <p class="text-xs text-gray-500 mt-2">Thương hiệu vận hành quốc tế, tối ưu hóa hiệu quả cho thuê.</p>
                     </div>
                     <div class="card p-6 rounded-xl">
                         <h4 class="font-bold text-lg">Hyundai E&C</h4>
                         <p class="text-sm text-[#a77b50] font-semibold">Tổng thầu xây dựng</p>
-                        <p class="text-xs text-gray-500 mt-2">Tập đoàn xây dựng hàng đầu Hàn Quốc, đảm bảo chất lượng thi công.</p>
                     </div>
                     <div class="card p-6 rounded-xl">
                         <h4 class="font-bold text-lg">NDA (Pháp)</h4>
                         <p class="text-sm text-[#a77b50] font-semibold">Tư vấn thiết kế</p>
-                        <p class="text-xs text-gray-500 mt-2">Kiến trúc sư danh tiếng, tạo nên thiết kế giật cấp độc đáo.</p>
                     </div>
+                </div>
+                <div class="bg-[#fdfcfb] p-8 rounded-2xl border border-[#f0e9e1]">
+                     <h3 class="text-2xl font-bold text-blue-800 mb-4 flex items-center justify-center"><span class="text-2xl mr-3">⚖️</span> Nền Tảng Pháp Lý Vững Chắc (GĐ1)</h3>
+                     <p class="text-center text-sm text-blue-700 mb-6">Dự án đã công bố bộ hồ sơ pháp lý nền tảng tương đối hoàn chỉnh, tạo sự an tâm cho nhà đầu tư.</p>
+                     <div class="overflow-x-auto">
+                        <table class="table-custom text-sm max-w-4xl mx-auto">
+                            <thead>
+                                <tr><th>Hạng mục</th><th>Số hiệu văn bản</th><th>Ngày cấp</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Quy hoạch 1/500</td><td>1313/QĐ-UBND</td><td>07/05/2019</td></tr>
+                                <tr><td>Chủ trương đầu tư</td><td>506/QĐ-UBND</td><td>12/03/2020</td></tr>
+                                <tr><td>Giấy phép xây dựng</td><td>14/GPXD-SXD</td><td>20/03/2020</td></tr>
+                                <tr><td>Phê duyệt ĐTM</td><td>2331/QĐ-UBND</td><td>16/07/2019</td></tr>
+                                <tr><td>Thẩm duyệt PCCC</td><td>2459/TD-PCCC-P4</td><td>29/11/2019</td></tr>
+                            </tbody>
+                        </table>
+                     </div>
                 </div>
             </div>
         </section>
         
-        <section id="risks" class="py-16 md:py-24 bg-[#fdfcfb]">
-            <div class="container mx-auto px-6">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Rủi Ro Trọng Yếu & Khung Pháp Lý</h2>
-                    <p class="text-gray-600">
-                        Một nhà đầu tư thông thái luôn xem xét cả hai mặt của một cơ hội. Phần này trình bày minh bạch các rủi ro tiềm ẩn và tình trạng pháp lý của dự án để bạn có cái nhìn toàn diện nhất.
-                    </p>
-                </div>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-red-50 border border-red-200 p-8 rounded-2xl">
-                        <h3 class="text-2xl font-bold text-red-800 mb-4 flex items-center"><span class="text-2xl mr-3">⚠️</span> Các Yếu Tố Rủi Ro</h3>
-                        <ul class="space-y-4">
-                            <li>
-                                <strong class="text-red-700">Năng lực tài chính CĐT:</strong> Pháp nhân lõi của KDI Holdings ghi nhận lỗ lũy kế tính đến cuối 2023, đặt ra câu hỏi về sức khỏe tài chính và khả năng triển khai.
-                            </li>
-                            <li>
-                                <strong class="text-red-700">Hình thức sở hữu 50 năm:</strong> Đất thương mại dịch vụ có thời hạn có thể là rào cản tâm lý với nhà đầu tư ưa thích sở hữu lâu dài.
-                            </li>
-                            <li>
-                                <strong class="text-red-700">Rủi ro thị trường:</strong> Phụ thuộc vào sự phục hồi của ngành du lịch và các biến động kinh tế vĩ mô.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="bg-blue-50 border border-blue-200 p-8 rounded-2xl">
-                        <h3 class="text-2xl font-bold text-blue-800 mb-4 flex items-center"><span class="text-2xl mr-3">⚖️</span> Tình Trạng Pháp Lý (GĐ1)</h3>
-                         <p class="text-sm text-blue-700 mb-4">Dự án đã công bố bộ hồ sơ pháp lý nền tảng tương đối hoàn chỉnh, tạo sự an tâm cho nhà đầu tư.</p>
-                         <div class="overflow-x-auto">
-                            <table class="table-custom text-sm">
-                                <thead>
-                                    <tr><th>Hạng mục</th><th>Số hiệu văn bản</th><th>Ngày cấp</th></tr>
-                                </thead>
-                                <tbody>
-                                    <tr><td>Quy hoạch 1/500</td><td>1313/QĐ-UBND</td><td>07/05/2019</td></tr>
-                                    <tr><td>Chủ trương đầu tư</td><td>506/QĐ-UBND</td><td>12/03/2020</td></tr>
-                                    <tr><td>Giấy phép xây dựng</td><td>14/GPXD-SXD</td><td>20/03/2020</td></tr>
-                                    <tr><td>Phê duyệt ĐTM</td><td>2331/QĐ-UBND</td><td>16/07/2019</td></tr>
-                                    <tr><td>Thẩm duyệt PCCC</td><td>2459/TD-PCCC-P4</td><td>29/11/2019</td></tr>
-                                </tbody>
-                            </table>
-                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="conclusion" class="py-16 md:py-24 bg-white">
+        <section id="conclusion" class="py-16 md:py-24 bg-[#fdfcfb]">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Kết Luận & Khuyến Nghị</h2>
+                <h2 class="text-3xl md:text-4xl font-bold section-title mb-4">Kết Luận & Checklist Thẩm Định</h2>
                 <p class="max-w-3xl mx-auto text-gray-600 mb-8">
-                    La Tiên Villa là một cơ hội đầu tư hấp dẫn với nhiều lợi thế vượt trội, nhưng cũng đi kèm những rủi ro cần thẩm định kỹ. Dự án phù hợp với nhà đầu tư có khẩu vị rủi ro trung bình đến cao, nhìn nhận bất động sản như một tài sản tạo dòng tiền và chấp nhận hình thức sở hữu có thời hạn để đổi lấy tiềm năng từ một hệ sinh thái kinh doanh du lịch hoàn chỉnh.
+                    Với các thông tin cập nhật, La Tiên Villa đã trở thành một cơ hội đầu tư hấp dẫn hơn đáng kể. Rủi ro về tiến độ đã được kiểm soát, pháp lý sở hữu đã rõ ràng, và chính sách bán hàng cực kỳ có lợi. Dự án phù hợp với nhà đầu tư có tầm nhìn dài hạn, chấp nhận sở hữu có thời hạn để đổi lấy tiềm năng từ một hệ sinh thái hoàn chỉnh.
                 </p>
-                <div class="bg-[#fdfcfb] border border-[#f0e9e1] p-8 rounded-2xl max-w-2xl mx-auto">
+                <div class="bg-white border border-[#f0e9e1] p-8 rounded-2xl max-w-2xl mx-auto">
                     <h4 class="font-bold text-lg mb-4">Checklist Thẩm Định Cuối Cùng:</h4>
                     <ul class="text-left space-y-2 text-gray-700">
-                        <li class="flex items-start"><span class="mr-2 mt-1">✅</span> <strong>Pháp lý GĐ2:</strong> Yêu cầu hồ sơ pháp lý cụ thể cho phân khu La Tiên Villa.</li>
-                        <li class="flex items-start"><span class="mr-2 mt-1">✅</span> <strong>Tài chính CĐT:</strong> Yêu cầu báo cáo tài chính đã kiểm toán gần nhất.</li>
-                        <li class="flex items-start"><span class="mr-2 mt-1">✅</span> <strong>Hợp đồng:</strong> Thẩm định kỹ hợp đồng mua bán và hợp đồng vận hành với The Ascott.</li>
-                        <li class="flex items-start"><span class="mr-2 mt-1">✅</span> <strong>Giá trị so sánh:</strong> Phân tích giá $/m² so với các dự án cạnh tranh cùng tiêu chuẩn.</li>
+                        <li class="flex items-start"><span class="mr-2 mt-1">✅</span> **Tham quan thực tế:** Bắt buộc tham quan nhà mẫu và hạ tầng thực tế để có đánh giá khách quan nhất.</li>
+                        <li class="flex items-start"><span class="mr-2 mt-1">✅</span> **Pháp lý GĐ2:** Yêu cầu hồ sơ pháp lý cụ thể cho phân khu La Tiên Villa.</li>
+                        <li class="flex items-start"><span class="mr-2 mt-1">✅</span> **Tài chính CĐT:** Dù tiến độ tốt, việc yêu cầu báo cáo tài chính gần nhất vẫn là một bước thẩm định cần thiết.</li>
+                        <li class="flex items-start"><span class="mr-2 mt-1">✅</span> **Hợp đồng:** Thẩm định kỹ lưỡng hợp đồng mua bán và hợp đồng quản lý vận hành với The Ascott.</li>
                     </ul>
                 </div>
             </div>
@@ -359,7 +315,7 @@
 
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Phân Tích Tương Tác La Tiên Villa| Credit: Vũ Trọng Khải - Mang tính chất tham khảo </p>
+            <p>&copy; 2025 Báo cáo Phân Tích Chuyên Sâu La Tiên Villa | Vũ Trọng Khải - 093 8811 050 </p>
             <p class="text-xs text-gray-400 mt-2">Thông tin trong ứng dụng này được tổng hợp cho mục đích tham khảo và không cấu thành lời khuyên đầu tư chính thức.</p>
         </div>
     </footer>
@@ -368,9 +324,9 @@
         document.addEventListener('DOMContentLoaded', function () {
             const competitorData = {
                 labels: ['La Tiên Villa', 'Gran Meliá Nha Trang', 'Vinpearl Resort', 'KĐT An Viên'],
-                prices: [15, 82.5, 26, 38.5],
+                prices: [20, 82.5, 26, 38.5],
                 usps: [
-                    'Hệ sinh thái Libera, thương hiệu Masterise, vị trí nội đô.',
+                    'Hệ sinh thái Libera, thương hiệu Masterise, chính sách tài chính đột phá.',
                     'Dinh thự siêu sang, thương hiệu Gran Meliá, riêng tư tuyệt đối.',
                     'Đảo riêng, hệ sinh thái VinWonders, thương hiệu mạnh.',
                     'Sở hữu lâu dài, cộng đồng hiện hữu, gần cảng du lịch.'
@@ -378,87 +334,33 @@
             };
 
             const swotData = {
-                strengths: `<ul class="space-y-3 list-disc list-inside text-left"><li><strong>Vị trí độc tôn:</strong> Nội đô, ven biển, "tựa sơn hướng hải".</li><li><strong>Hệ sinh thái "All-in-one":</strong> Tiện ích đa dạng, đẳng cấp.</li><li><strong>Hệ thống đối tác mạnh:</strong> Masterise Homes, The Ascott, Hyundai E&C.</li><li><strong>Pháp lý giai đoạn 1 minh bạch:</strong> Đã có GPXD, quy hoạch 1/500.</li></ul>`,
-                weaknesses: `<ul class="space-y-3 list-disc list-inside text-left"><li><strong>Rủi ro tài chính CĐT:</strong> Lỗ lũy kế của pháp nhân lõi KDI Holdings.</li><li><strong>Sở hữu có thời hạn:</strong> TMDV 50 năm có thể kén nhà đầu tư.</li><li><strong>Giá bán phân khúc cao:</strong> Kén chọn tệp khách hàng có tiềm lực tài chính mạnh.</li></ul>`,
-                opportunities: `<ul class="space-y-3 list-disc list-inside text-left"><li><strong>Du lịch Nha Trang phục hồi:</strong> Nhu cầu nghỉ dưỡng cao cấp tăng.</li><li><strong>Quy hoạch phát triển Bắc Nha Trang:</strong> Hạ tầng được đầu tư, trở thành trung tâm mới.</li><li><strong>Sự khan hiếm quỹ đất tương tự:</strong> Đẩy giá trị tài sản tăng trong dài hạn.</li><li><strong>Xu hướng "second home" hạng sang:</strong> Nhu cầu sở hữu ngôi nhà thứ hai tăng.</li></ul>`,
-                threats: `<ul class="space-y-3 list-disc list-inside text-left"><li><strong>Cạnh tranh gay gắt:</strong> Từ các dự án của Vinpearl, các KĐT khác.</li><li><strong>Biến động kinh tế vĩ mô:</strong> Lãi suất, lạm phát ảnh hưởng đến thị trường BĐS.</li><li><strong>Rủi ro cam kết lợi nhuận:</strong> Bài học từ các dự án condotel thất bại.</li><li><strong>Sự phụ thuộc vào du lịch quốc tế:</strong> Đặc biệt là các thị trường trọng điểm.</li></ul>`
+                strengths: `<ul class="space-y-3 list-disc list-inside text-left"><li><strong>Tiến độ thực tế:</strong> Hạ tầng hoàn thiện, có nhà mẫu, giảm rủi ro triển khai.</li><li><strong>Chính sách tài chính đột phá:</strong> Hỗ trợ vay 70% HTLS 24 tháng, chiết khấu đến 15%.</li><li><strong>Vị trí độc tôn:</strong> Nội đô, ven biển, "tựa sơn hướng hải".</li><li><strong>Hệ sinh thái "All-in-one":</strong> Hơn 99 tiện ích đẳng cấp.</li><li><strong>Hệ thống đối tác mạnh:</strong> Masterise Homes, The Ascott, Hyundai E&C.</li></ul>`,
+                weaknesses: `<ul class="space-y-3 list-disc list-inside text-left"><li><strong>Sở hữu có thời hạn đến 2071:</strong> Vẫn có thể là rào cản tâm lý với một số nhà đầu tư.</li><li><strong>Giá bán phân khúc cao:</strong> Kén chọn tệp khách hàng có tiềm lực tài chính mạnh.</li><li><strong>Rủi ro tài chính CĐT:</strong> Dù đã được chứng minh năng lực, vẫn cần theo dõi sát sao.</li></ul>`,
+                opportunities: `<ul class="space-y-3 list-disc list-inside text-left"><li><strong>Du lịch Nha Trang phục hồi:</strong> Nhu cầu nghỉ dưỡng cao cấp tăng.</li><li><strong>Quy hoạch phát triển Bắc Nha Trang:</strong> Hạ tầng được đầu tư, trở thành trung tâm mới.</li><li><strong>Sự khan hiếm quỹ đất tương tự:</strong> Đẩy giá trị tài sản tăng trong dài hạn.</li></ul>`,
+                threats: `<ul class="space-y-3 list-disc list-inside text-left"><li><strong>Cạnh tranh gay gắt:</strong> Từ các dự án khác trong khu vực.</li><li><strong>Biến động kinh tế vĩ mô:</strong> Lãi suất, lạm phát ảnh hưởng đến thị trường BĐS.</li><li><strong>Rủi ro cam kết lợi nhuận:</strong> Bài học từ các dự án condotel thất bại (chung của thị trường).</li></ul>`
             };
             
-            const rentalData = {
-                single: {
-                    title: "Chính sách cho Biệt Thự Đơn Lập",
-                    content: `<ul class="space-y-3 list-disc list-inside text-left"><li><strong>Cơ cấu:</strong> Nhận trước 03 năm tiền thuê nhà.</li><li><strong>Từ năm thứ 4:</strong> Chia sẻ lợi nhuận theo tỷ lệ <strong>80% (khách hàng) / 20% (đơn vị vận hành)</strong> trên lợi nhuận trước thuế.</li><li><strong>Đặc quyền:</strong> Hưởng 90% số đêm nghỉ miễn phí mỗi năm.</li><li><strong>Phân tích:</strong> Phù hợp với nhà đầu tư muốn nhận một khoản tiền lớn ban đầu để tối ưu dòng tiền cá nhân. Rủi ro/lợi nhuận dài hạn phụ thuộc vào hiệu quả kinh doanh thực tế.</li></ul>`
-                },
-                semi: {
-                    title: "Chính sách cho Biệt Thự Song Lập",
-                    content: `<ul class="space-y-3 list-disc list-inside text-left"><li><strong>Cơ cấu:</strong> Cam kết lợi nhuận cố định <strong>5%/năm trong 6 năm đầu</strong>.</li><li><strong>Linh hoạt:</strong> Khoản cam kết này có thể được trừ thẳng vào giá bán khi ký HĐMB.</li><li><strong>Từ năm thứ 7 - 15:</strong> Chuyển sang cơ chế chia sẻ lợi nhuận.</li><li><strong>Phân tích:</strong> Phù hợp với nhà đầu tư ưa thích sự an toàn, muốn có một nguồn thu nhập ổn định và dự đoán được trong những năm đầu tiên.</li></ul>`
-                }
-            };
-
             const investmentScenarios = {
-                vay: {
-                    title: "Kịch bản 1: Vay 70% (HTLS 36 tháng)",
-                    table: `
-                        <table class="table-custom text-sm">
-                            <thead><tr><th>Hạng mục</th><th>Chi tiết</th></tr></thead>
-                            <tbody>
-                                <tr><td><strong>Vốn tự có ban đầu</strong></td><td><span class="font-bold text-[#a77b50]">4.5 tỷ (30%)</span></td></tr>
-                                <tr><td><strong>Dòng tiền ra (Tiến độ)</strong></td><td>Thanh toán 30% trong các đợt đầu.</td></tr>
-                                <tr><td><strong>Thời điểm nhận nhà</strong></td><td>Quý 3/2026 (dự kiến)</td></tr>
-                                <tr><td><strong>Dòng tiền vào (Cho thuê)</strong></td><td>Bắt đầu từ Quý 3/2026</td></tr>
-                                <tr><td><strong>Dòng tiền ra (Trả nợ)</strong></td><td>Bắt đầu trả gốc & lãi từ Quý 3/2029</td></tr>
-                                <tr><td><strong>Phân tích Lợi/Hại</strong></td><td><strong>Lợi:</strong> Đòn bẩy tài chính lớn, 3 năm khai thác tạo dòng tiền trước khi trả nợ.<br><strong>Hại:</strong> Rủi ro lãi suất thả nổi sau thời gian ưu đãi.</td></tr>
-                            </tbody>
-                        </table>`
+                'vay-uu-dai': {
+                    title: "Kịch bản 1: Vay 70% (Ưu đãi 100 KH đầu tiên)",
+                    table: `<table class="table-custom text-sm"><thead><tr><th>Hạng mục</th><th>Chi tiết</th></tr></thead><tbody><tr><td><strong>Vốn tự có đến khi nhận nhà</strong></td><td><span class="font-bold text-[#a77b50]">15%</span></td></tr><tr><td><strong>Hỗ trợ từ CĐT</strong></td><td>Lãi suất <strong>0% trong 24 tháng</strong>, Ân hạn nợ gốc <strong>24 tháng</strong>.</td></tr><tr><td><strong>Tiến độ vào tiền</strong></td><td>5% ký HĐMB, 10% sau 30 ngày. Ngân hàng giải ngân 45%.</td></tr><tr><td><strong>Nhận nhà (dự kiến T1/2027)</strong></td><td>Thanh toán thêm 15%. Ngân hàng giải ngân 20%.</td></tr><tr><td><strong>Phân tích Lợi/Hại</strong></td><td><strong>Lợi:</strong> Đòn bẩy tài chính cực lớn, vốn ban đầu rất thấp. Có 1 năm khai thác tạo dòng tiền trước khi bắt đầu trả lãi.<br><strong>Hại:</strong> Rủi ro lãi suất thả nổi sau 24 tháng.</td></tr></tbody></table>`
                 },
-                'tien-do': {
-                    title: "Kịch bản 2: Thanh toán theo tiến độ 2 năm",
-                    table: `
-                        <table class="table-custom text-sm">
-                             <thead><tr><th>Hạng mục</th><th>Chi tiết</th></tr></thead>
-                            <tbody>
-                                <tr><td><strong>Vốn tự có ban đầu</strong></td><td><span class="font-bold text-[#a77b50]">15 tỷ</span></td></tr>
-                                <tr><td><strong>Dòng tiền ra (Tiến độ)</strong></td><td>Dàn trải trong 24 tháng, 25% khi nhận nhà.</td></tr>
-                                <tr><td><strong>Thời điểm nhận nhà</strong></td><td>Quý 3/2026 (dự kiến)</td></tr>
-                                <tr><td><strong>Dòng tiền vào (Cho thuê)</strong></td><td>Bắt đầu từ Quý 3/2026</td></tr>
-                                <tr><td><strong>Dòng tiền ra (Trả nợ)</strong></td><td>Không có</td></tr>
-                                <tr><td><strong>Phân tích Lợi/Hại</strong></td><td><strong>Lợi:</strong> Không phụ thuộc nợ vay, chủ động dòng tiền.<br><strong>Hại:</strong> Yêu cầu vốn tự có lớn, áp lực thanh toán đều đặn.</td></tr>
-                            </tbody>
-                        </table>`
+                'tien-do-18': {
+                    title: "Kịch bản 2: Tiến độ chuẩn 18 tháng (Chiết khấu 5%)",
+                    table: `<table class="table-custom text-sm"><thead><tr><th>Hạng mục</th><th>Chi tiết</th></tr></thead><tbody><tr><td><strong>Ưu đãi</strong></td><td><span class="font-bold text-[#a77b50]">Chiết khấu 5%</span> vào giá bán trước VAT.</td></tr><tr><td><strong>Tiến độ vào tiền</strong></td><td>Dàn trải trong 18 tháng, chia thành 19 đợt thanh toán.</td></tr><tr><td><strong>Đợt thanh toán lớn</strong></td><td>10% khi ký HĐMB, 25% khi nhận bàn giao.</td></tr><tr><td><strong>Phân tích Lợi/Hại</strong></td><td><strong>Lợi:</strong> Hưởng chiết khấu tốt, không phụ thuộc nợ vay, chủ động dòng tiền.<br><strong>Hại:</strong> Yêu cầu vốn tự có lớn, áp lực thanh toán đều đặn.</td></tr></tbody></table>`
+                },
+                'tien-do-30': {
+                    title: "Kịch bản 3: Tiến độ giãn 30 tháng",
+                    table: `<table class="table-custom text-sm"><thead><tr><th>Hạng mục</th><th>Chi tiết</th></tr></thead><tbody><tr><td><strong>Ưu đãi</strong></td><td>Không hưởng chiết khấu thanh toán.</td></tr><tr><td><strong>Tiến độ vào tiền</strong></td><td>Dàn trải trong 30 tháng, chia thành 25 đợt thanh toán.</td></tr><tr><td><strong>Đợt thanh toán lớn</strong></td><td>10% khi ký HĐMB, 25% khi nhận bàn giao.</td></tr><tr><td><strong>Phân tích Lợi/Hại</strong></td><td><strong>Lợi:</strong> Dòng tiền thanh toán được giãn tối đa, giảm áp lực tài chính hàng tháng.<br><strong>Hại:</strong> Không được hưởng chiết khấu, tổng giá trị cao hơn.</td></tr></tbody></table>`
                 },
                 som: {
-                    title: "Kịch bản 3: Thanh toán sớm 95%",
-                    table: `
-                        <table class="table-custom text-sm">
-                             <thead><tr><th>Hạng mục</th><th>Chi tiết</th></tr></thead>
-                            <tbody>
-                                <tr><td><strong>Vốn tự có ban đầu</strong></td><td><span class="font-bold text-[#a77b50]">~13.5 tỷ (sau chiết khấu ~10%)</span></td></tr>
-                                <tr><td><strong>Dòng tiền ra (Tiến độ)</strong></td><td>Thanh toán 95% ngay từ đầu.</td></tr>
-                                <tr><td><strong>Thời điểm nhận nhà</strong></td><td>Quý 3/2026 (dự kiến)</td></tr>
-                                <tr><td><strong>Dòng tiền vào (Cho thuê)</strong></td><td>Bắt đầu từ Quý 3/2026</td></tr>
-                                <tr><td><strong>Dòng tiền ra (Trả nợ)</strong></td><td>Không có</td></tr>
-                                <tr><td><strong>Phân tích Lợi/Hại</strong></td><td><strong>Lợi:</strong> Hưởng chiết khấu cao nhất, tối ưu giá vốn.<br><strong>Hại:</strong> Chôn vốn lớn trong thời gian dài chờ nhận nhà.</td></tr>
-                            </tbody>
-                        </table>`
+                    title: "Kịch bản 4: Thanh toán sớm 95% (Chiết khấu 15%)",
+                    table: `<table class="table-custom text-sm"><thead><tr><th>Hạng mục</th><th>Chi tiết</th></tr></thead><tbody><tr><td><strong>Ưu đãi</strong></td><td><span class="font-bold text-red-600">Chiết khấu 15%</span> vào giá bán trước VAT.</td></tr><tr><td><strong>Tiến độ vào tiền</strong></td><td>Thanh toán 95% giá bán (gồm VAT) trong vòng 30 ngày kể từ ngày ký HĐMB.</td></tr><tr><td><strong>Phân tích Lợi/Hại</strong></td><td><strong>Lợi:</strong> Hưởng chiết khấu cao nhất, tối ưu giá vốn ở mức cao nhất, gia tăng biên lợi nhuận.<br><strong>Hại:</strong> Chôn vốn lớn trong thời gian dài chờ nhận nhà.</td></tr></tbody></table>`
                 }
             };
             
             const amenities = [
-                { name: 'Nhà hát Đó', category: 'culture', icon: '🎭' },
-                { name: 'Đại lộ danh vọng', category: 'culture', icon: '🌟' },
-                { name: 'Công viên Vạn San Đảo', category: 'culture', icon: '🐠' },
-                { name: 'Nhà hàng Hispania Michelin', category: 'culture', icon: '🍽️' },
-                { name: 'Libera Beach Club', category: 'entertainment', icon: '🎉' },
-                { name: 'Phố đi bộ', category: 'entertainment', icon: '🚶' },
-                { name: 'Khu mua sắm', category: 'entertainment', icon: '🛍️' },
-                { name: 'Khu nhạc nước', category: 'entertainment', icon: '⛲' },
-                { name: 'Bến du thuyền', category: 'entertainment', icon: '🛥️' },
-                { name: '3 bãi tắm riêng', category: 'wellness', icon: '🏖️' },
-                { name: 'Spa hang đá', category: 'wellness', icon: '💎' },
-                { name: 'Suối khoáng nóng', category: 'wellness', icon: '♨️' },
-                { name: 'Hồ bơi vô cực', category: 'wellness', icon: '🏊' },
-                { name: 'Trung tâm thể thao', category: 'wellness', icon: '🏋️' },
-                { name: 'Vườn thiền', category: 'wellness', icon: '🧘' },
+                { name: 'Nhà hát Đó', category: 'culture', icon: '🎭' }, { name: 'Đại lộ danh vọng', category: 'culture', icon: '🌟' }, { name: 'Công viên Vạn San Đảo', category: 'culture', icon: '🐠' }, { name: 'Nhà hàng Michelin', category: 'culture', icon: '🍽️' }, { name: 'Libera Beach Club', category: 'entertainment', icon: '🎉' }, { name: 'Phố đi bộ', category: 'entertainment', icon: '🚶' }, { name: 'Khu mua sắm', category: 'entertainment', icon: '🛍️' }, { name: 'Khu nhạc nước', category: 'entertainment', icon: '⛲' }, { name: 'Bến du thuyền', category: 'entertainment', icon: '🛥️' }, { name: '3 bãi tắm riêng', category: 'wellness', icon: '🏖️' }, { name: 'Spa hang đá', category: 'wellness', icon: '💎' }, { name: 'Suối khoáng nóng', category: 'wellness', icon: '♨️' }, { name: 'Hồ bơi vô cực', category: 'wellness', icon: '🏊' }, { name: 'Trung tâm thể thao', category: 'wellness', icon: '🏋️' }, { name: 'Vườn thiền', category: 'wellness', icon: '🧘' },
             ];
             
             const amenitiesGrid = document.getElementById('amenities-grid');
@@ -543,23 +445,16 @@
                     updateScenarioContent(btn.dataset.scenario);
                 });
             });
-            updateScenarioContent('vay');
+            updateScenarioContent('vay-uu-dai');
             
-            const rentalContainer = document.getElementById('rental-details');
-            const rentalBtns = document.querySelectorAll('.rental-btn');
-            function updateRentalContent(target) {
-                const data = rentalData[target];
-                rentalContainer.innerHTML = `<h4 class="font-bold text-lg mb-4 text-center">${data.title}</h4>${data.content}`;
-                rentalContainer.classList.remove('fade-in'); void rentalContainer.offsetWidth; rentalContainer.classList.add('fade-in');
-            }
-            rentalBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    rentalBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    updateRentalContent(btn.dataset.target);
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 });
             });
-            updateRentalContent('single');
         });
     </script>
 </body>
